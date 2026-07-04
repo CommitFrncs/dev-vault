@@ -78,9 +78,13 @@ function createEntry(content, project) {
   return entry;
 }
 
-const vault = [];
+let vault = [];
 
-vault.push(createEntry("https://github.com", "httistudio"));
-vault.push(createEntry("sk-1234567890abcdef", "commitfrncs-hub"));
+if (fs.existsSync("vault.json")) {
+  const fileContent = fs.readFileSync("vault.json", "utf8");
+  vault = JSON.parse(fileContent);
+}
+
+vault.push(createEntry(process.argv[2], process.argv[3]));
 
 fs.writeFileSync("vault.json", JSON.stringify(vault, null, 2));

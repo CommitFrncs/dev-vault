@@ -12,5 +12,47 @@
     "project": "commitfrncs-hub",
     "createdAt": "2026-07-04T15:29:54.277Z",
     "time": "4:29:54 PM"
+  },
+  {
+    "content": "https://github.com",
+    "category": "link",
+    "project": "httistudio",
+    "createdAt": "2026-07-04T15:35:41.495Z",
+    "time": "4:35:41 PM"
+  },
+  {
+    "content": "sk-1234567890abcdef",
+    "category": "api_key",
+    "project": "commitfrncs-hub",
+    "createdAt": "2026-07-04T15:35:41.515Z",
+    "time": "4:35:41 PM"
+  },
+  {
+    "content": "https://github.com",
+    "category": "link",
+    "project": "httistudio",
+    "createdAt": "2026-07-04T15:36:15.424Z",
+    "time": "4:36:15 PM"
+  },
+  {
+    "content": "sk-1234567890abcdef",
+    "category": "api_key",
+    "project": "commitfrncs-hub",
+    "createdAt": "2026-07-04T15:36:15.445Z",
+    "time": "4:36:15 PM"
+  },
+  {
+    "content": "https://example.com",
+    "category": "link",
+    "project": "test-project",
+    "createdAt": "2026-07-04T15:45:44.306Z",
+    "time": "4:45:44 PM"
+  },
+  {
+    "content": "const x = 5;",
+    "category": "code_snippet",
+    "project": "httistudio",
+    "createdAt": "2026-07-04T15:46:18.752Z",
+    "time": "4:46:18 PM"
   }
 ]

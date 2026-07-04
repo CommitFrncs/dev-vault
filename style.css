@@ -1,0 +1,246 @@
+/* ===== RESET & BASE ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, sans-serif;
+  background: #f4f5f7;
+  color: #1a1a2e;
+  line-height: 1.5;
+  padding: 1rem;
+}
+
+/* ===== LAYOUT ===== */
+header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+header h1 {
+  font-size: 1.75rem;
+  margin-bottom: 0.25rem;
+}
+
+.subtitle {
+  color: #555;
+  font-size: 0.95rem;
+}
+
+main {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+/* ===== CARD ===== */
+.card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 1.25rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.25rem;
+}
+
+/* ===== FORM ===== */
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 0.35rem;
+  color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  transition: border-color 0.15s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #4a6cf7;
+  box-shadow: 0 0 0 2px rgba(74, 108, 247, 0.15);
+}
+
+#save-btn {
+  width: 100%;
+  padding: 0.65rem;
+  background: #4a6cf7;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+#save-btn:hover {
+  background: #3b5de7;
+}
+
+/* ===== FILTERS ===== */
+#filter-section {
+  margin-bottom: 1rem;
+}
+
+#filter-section h2 {
+  font-size: 1.15rem;
+  margin-bottom: 0.5rem;
+}
+
+#filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.filter-btn {
+  padding: 0.35rem 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  background: #fff;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.filter-btn:hover {
+  background: #eef0ff;
+  border-color: #4a6cf7;
+}
+
+.filter-btn.active {
+  background: #4a6cf7;
+  color: #fff;
+  border-color: #4a6cf7;
+}
+
+/* ===== ENTRY LIST ===== */
+#entry-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* Individual entry card */
+.entry-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  position: relative;
+}
+
+.entry-card .entry-content {
+  font-size: 0.95rem;
+  word-break: break-all;
+  margin-bottom: 0.5rem;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 0.85rem;
+  background: #f9f9fb;
+  padding: 0.4rem 0.6rem;
+  border-radius: 4px;
+}
+
+/* Meta row: project + time */
+.entry-card .entry-meta {
+  font-size: 0.8rem;
+  color: #666;
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.entry-card .entry-project {
+  font-weight: 600;
+  color: #333;
+}
+
+/* ===== CATEGORY BADGES ===== */
+.category-badge {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 0.2rem 0.55rem;
+  border-radius: 12px;
+  margin-bottom: 0.4rem;
+}
+
+.category-link {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.category-api_key {
+  background: #fce7f3;
+  color: #9d174d;
+}
+
+.category-code_snippet {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.category-generic_api {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.category-note {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+/* ===== DELETE BUTTON ===== */
+.delete-btn {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  width: 26px;
+  height: 26px;
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+  color: #999;
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s;
+}
+
+.delete-btn:hover {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+/* ===== EMPTY STATE ===== */
+.empty-state {
+  text-align: center;
+  padding: 2.5rem 1rem;
+  color: #888;
+  font-style: italic;
+}
+
+.hidden {
+  display: none;
+}
