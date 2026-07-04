@@ -60,7 +60,7 @@ function detectCategory(content) {
   if (isGenericApi) {
     return "generic_api";
   }
-  return "unknown";
+  return "note";
 }
 
 // Console logs for testing the function
