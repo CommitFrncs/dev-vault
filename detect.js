@@ -1,3 +1,5 @@
+const fs = require("fs");
+
 // URL detection
 function detectCategory(content) {
   if (content.startsWith("http://") || content.startsWith("https://")) {
@@ -63,19 +65,22 @@ function detectCategory(content) {
   return "note";
 }
 
-// Console logs for testing the function
-console.log(detectCategory("https://github.com"));
-console.log(detectCategory("sk-1234567890abcdef"));
-console.log(detectCategory("console.log('hello world');"));
-console.log(
-  detectCategory(
-    "<div style='color: red; padding: 10px;'><h1>Hello</h1></div>",
-  ),
-);
-console.log(detectCategory("This is a valid submission for the client"));
-console.log(
-  detectCategory(
-    "This is a fairly long sentence that a user might type as a note, with punctuation.",
-  ),
-);
-console.log(detectCategory("hello world"));
+function createEntry(content, project) {
+  const category = detectCategory(content);
+  const now = new Date();
+  const entry = {
+    content: content,
+    category: category,
+    project: project,
+    createdAt: now.toISOString(),
+    time: now.toLocaleTimeString(),
+  };
+  return entry;
+}
+
+const vault = [];
+
+vault.push(createEntry("https://github.com", "httistudio"));
+vault.push(createEntry("sk-1234567890abcdef", "commitfrncs-hub"));
+
+fs.writeFileSync("vault.json", JSON.stringify(vault, null, 2));
